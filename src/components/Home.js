@@ -18,14 +18,80 @@ const Content = styled.section`
     align-items: center;
 `;
 
+const TextContainer = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+`;
+
+const TextInnerContainer = styled.div`
+    display: flex;
+    width: 100%;
+`;
+
+const Text = styled.div`
+    width: 30%;
+    font-size: calc(25px + 0.5vw);
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+`;
 
 class Home extends Component {
 
   render () {
+
+    let allTexts = [];
+    for(let i = 0; i < 4; i++) {
+      allTexts.push(
+        <Text style={{marginTop:  (4 * i) + "rem"}}> Site en construction </Text>
+      );
+    }
     return (
       <Content>
-        <ImageConstruction src={image}/>
+        <ImageConstruction src={image} />
         
+        <TextContainer>
+          <TextInnerContainer>
+            { allTexts.map((val, index) => (
+
+              <div>{ val }</div>
+    
+            )) }
+          </TextInnerContainer>
+        </TextContainer>
+
+        <TextContainer>
+          <TextInnerContainer>
+            { allTexts.map((val, index) => (
+
+              <div style={{marginTop: "10rem", marginLeft: "5rem"}}>{ val }</div>
+    
+            )) }
+          </TextInnerContainer>
+        </TextContainer>
+  
+        <TextContainer>
+          <TextInnerContainer>
+            { allTexts.map((val, index) => (
+
+              <div style={{marginTop: "20rem", marginLeft: "1rem"}}>{ val }</div>
+    
+            )) }
+          </TextInnerContainer>
+        </TextContainer>
+
+         <TextContainer>
+          <TextInnerContainer>
+            { allTexts.map((val, index) => (
+
+              <div style={{marginTop: "30rem", marginLeft: "5rem"}}>{ val }</div>
+    
+            )) }
+          </TextInnerContainer>
+        </TextContainer>
+
+
         {/*<Link to={{
         pathname:'/' + 'project'
         }}
