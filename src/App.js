@@ -45,7 +45,6 @@ class App extends Component {
 
         <Content>
           <ImageConstruction src={image}/>
-          tegs
         </Content>
 
       </AppContainer>  
