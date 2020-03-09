@@ -1,51 +1,75 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Switch, Route, withRouter } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
 import styled, { createGlobalStyle } from 'styled-components';
-import image from './images/en_construction.png';
 
 import Reset from './styles/reset';
-
-const GlobalStyle = createGlobalStyle`
-  ${Reset}
-`;
+import Home from './components/Home';
+import Project from './components/Project';
 
 const AppContainer = styled.section`
     width: 100%;
 `;
 
-const Content = styled.section`
-    width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+const GlobalStyle = createGlobalStyle`
+  ${Reset}
+    &.transition-group {
+    .page-enter {
+        opacity: 0;
+        z-index: 100;
+        transform-origin: 50% 50%;
+        transform: translate3d(0, -5%, 0) scale(0.98);
+        transition: all 500ms cubic-bezier(0.48, 0.22, 0.4, 0.98);
+      }
+    
+      .page-enter-done {
+        opacity: 1;
+        z-index: 100;
+        transform: translate3d(0, 0, 0) scale(1);
+        transition: all 500ms cubic-bezier(0.48, 0.22, 0.4, 0.98);
+      }
+    
+      .page-exit {
+        opacity: 0;
+        z-index: 100;
+        transform-origin: 50% 50%;
+        transform: translate3d(0, -5%, 0) scale(0.98);
+        transition: all 500ms cubic-bezier(0.48, 0.22, 0.4, 0.98);
+      }
+    
+      .page-exit .page-exit-active {
+        opacity: 0;
+        z-index: 1;
+        transform: scale(0.98);
+        transform: translate3d(0, -5%, 0) scale(0.98);
+      }
+    }
 `;
 
-const ImageConstruction = styled.img`
-    max-width: 100%;
-    max-height: 100vh;
-    margin: 0;
-`;
-
-const Text = styled.div`
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-    font-size: 1rem;
-`;
 
 class App extends Component {
 
   render () {
+    const { location } = this.props;
+
     return (
       <AppContainer>
 
         <GlobalStyle />
 
-        <Content>
-          <ImageConstruction src={image}/>
-        </Content>
+          <TransitionGroup className="transition-group page">
+            <CSSTransition key={location.key} timeout={{ enter: 250, exit: 500 }} classNames="page">
+              <section className="route-section">
+                <Switch location={location}>
+
+                  <Route exact path={'/'} component={() => <Home />} />
+                  <Route path={'/project'} component={() => <Project />} />
+                  {/* <Route component={() => <ErrorPage />} /> */}
+                </Switch>
+              </section>
+            </CSSTransition>
+          </TransitionGroup>
 
       </AppContainer>  
     );
@@ -53,4 +77,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
