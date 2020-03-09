@@ -47,6 +47,7 @@ class Home extends Component {
         <Text style={{marginTop:  (4 * i) + "rem"}}> Site en construction </Text>
       );
     }
+
     return (
       <Content>
         <ImageConstruction src={image} />
