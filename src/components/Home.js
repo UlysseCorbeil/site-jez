@@ -92,7 +92,7 @@ class Home extends Component {
         />
 
         <Project
-            images={ [wiki3, wiki1, wiki2] } 
+            images={ [wiki1, wiki2, wiki3] } 
             description={
               [
                 "Material : Wikipedia articles ", 
