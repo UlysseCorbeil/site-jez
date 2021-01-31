@@ -87,8 +87,7 @@ class Home extends Component {
             images={ [bruit1, bruit2, bruit3] } 
             description={
               [
-                "Material : superficially repaired objects, and the sound of their destruction", 
-                "Also pretty clear ",
+                "Materials : superficially repaired objects and the sound of their destruction ", 
               ]} 
         />
 
@@ -96,8 +95,8 @@ class Home extends Component {
             images={ [wiki3, wiki1, wiki2] } 
             description={
               [
-                "Material : Wikipedia articles", 
-                "This is all the tabs I opened and couldn’t bring myself to close. ",
+                "Material : Wikipedia articles ", 
+                "An online research history as a self portrait exploring the relationship between the amount of available knowledge and mortality, recreating this overwhelming feeling of opening too many Wikipedia tabs. ",
               ]} 
         />
 
@@ -107,8 +106,7 @@ class Home extends Component {
             isRow = {true}
             description={
               [
-                "Material : waters, water-related memories", 
-                "This is pretty self explanatory… should I put a list of the ones I have so far ? ",
+                "Materials : waters from art institution, churches, rivers, and water-related memories", 
               ]} 
         />
        
