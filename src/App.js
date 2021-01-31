@@ -19,31 +19,24 @@ const GlobalStyle = createGlobalStyle`
     .page-enter {
         opacity: 0;
         z-index: 100;
-        transform-origin: 50% 50%;
-        transform: translate3d(0, -5%, 0) scale(0.98);
         transition: all 300ms cubic-bezier(0.48, 0.22, 0.4, 0.98);
       }
     
       .page-enter-done {
         opacity: 1;
         z-index: 100;
-        transform: translate3d(0, 0, 0) scale(1);
         transition: all 300ms cubic-bezier(0.48, 0.22, 0.4, 0.98);
       }
     
       .page-exit {
         opacity: 0;
         z-index: 100;
-        transform-origin: 50% 50%;
-        transform: translate3d(0, -5%, 0) scale(0.98);
         transition: all 300ms cubic-bezier(0.48, 0.22, 0.4, 0.98);
       }
     
       .page-exit .page-exit-active {
         opacity: 0;
         z-index: 1;
-        transform: scale(0.98);
-        transform: translate3d(0, -5%, 0) scale(0.98);
       }
     }
 `;
