@@ -64,7 +64,7 @@ class Home extends Component {
           <SubTitle>Goldsmiths Application</SubTitle>
         </Container>
         <Project 
-          images={ [water3, water, water2] } 
+          images={ [water2, water, water3] } 
           description={
             [
               "Material : glass, 383g of holy water, light ", 
@@ -78,8 +78,8 @@ class Home extends Component {
             images={ [ideal1, ideal2, ideal3, ideal4] } 
             description={
               [
-                "Material : vinyl words ", 
-                "This is the lack of materialisation of my ideal studio",
+                "Materials : black vinyl, borrowed space", 
+                "This is the lack of materialization of my own studio. ",
               ]} 
         />
 
