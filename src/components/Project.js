@@ -2,21 +2,34 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Image = styled.img`
-  width: 40%;
-  margin-top: 1%;
+  @media (min-width:600px)  {
+    width: 40%;
+    margin-top: 1%;
+  }
+  width: 100%;
+  margin-top: 3%;
 `;
 
 const Description = styled.span`
-  width: 40%;
-  margin-top: 1%;
+  @media (min-width:600px)  {
+    width: 40%;
+    margin-top: 1%;
+  }
+  width: 100%;
+  margin-top: 3%;
 `;
 
 const Content = styled.div`
-      width: 100%;
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: center;
-      align-items: center;
+  @media (min-width:600px)  {
+    margin-top: 1%;
+    margin-bottom: 10%;
+  }
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15%;
 `;
 
 class Project extends Component {
@@ -27,13 +40,13 @@ class Project extends Component {
       <Content>
         {
           this.props.images.map(image => (
-            <Image src={image}/>
+            <Image key={image} src={image}/>
           ))
         }
 
         {
           this.props.description.map(description => (
-            <Description>{description}</Description>
+            <Description key={description}>{description}</Description>
           ))
         }
   
