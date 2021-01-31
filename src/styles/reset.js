@@ -313,6 +313,24 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
+
+.link {
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.rowImage {
+    display: flex;
+    flex-flow: row wrap;
+    width: 45%;
+}
+
 `;
 
 export default Reset;

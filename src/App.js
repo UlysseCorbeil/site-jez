@@ -6,7 +6,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 import Reset from './styles/reset';
 import Home from './components/Home';
-import Project from './components/Project';
+import InProgress from './components/InProgress';
+import ErrorPage from './components/ErrorPage';
 
 const AppContainer = styled.section`
     width: 100%;
@@ -20,14 +21,14 @@ const GlobalStyle = createGlobalStyle`
         z-index: 100;
         transform-origin: 50% 50%;
         transform: translate3d(0, -5%, 0) scale(0.98);
-        transition: all 500ms cubic-bezier(0.48, 0.22, 0.4, 0.98);
+        transition: all 300ms cubic-bezier(0.48, 0.22, 0.4, 0.98);
       }
     
       .page-enter-done {
         opacity: 1;
         z-index: 100;
         transform: translate3d(0, 0, 0) scale(1);
-        transition: all 500ms cubic-bezier(0.48, 0.22, 0.4, 0.98);
+        transition: all 300ms cubic-bezier(0.48, 0.22, 0.4, 0.98);
       }
     
       .page-exit {
@@ -35,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
         z-index: 100;
         transform-origin: 50% 50%;
         transform: translate3d(0, -5%, 0) scale(0.98);
-        transition: all 500ms cubic-bezier(0.48, 0.22, 0.4, 0.98);
+        transition: all 300ms cubic-bezier(0.48, 0.22, 0.4, 0.98);
       }
     
       .page-exit .page-exit-active {
@@ -59,13 +60,13 @@ class App extends Component {
         <GlobalStyle />
 
           <TransitionGroup className="transition-group page">
-            <CSSTransition key={location.key} timeout={{ enter: 250, exit: 500 }} classNames="page">
+            <CSSTransition key={location.key} timeout={300} classNames="page">
               <section className="route-section">
                 <Switch location={location}>
 
                   <Route exact path={'/'} component={() => <Home />} />
-                  <Route path={'/project'} component={() => <Project />} />
-                  {/* <Route component={() => <ErrorPage />} /> */}
+                  <Route exact path={'/inprogress'} component={() => <InProgress />} />
+                  <Route component={() => <ErrorPage />} />
                 </Switch>
               </section>
             </CSSTransition>

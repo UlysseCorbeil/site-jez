@@ -13,6 +13,20 @@ import ideal2 from "../images/ideal7.jpg";
 import ideal3 from "../images/ideal3.jpg";
 import ideal4 from "../images/ideal6.jpg";
 
+import bruit1 from "../images/bruit1.JPG";
+import bruit2 from "../images/bruit2.JPG";
+import bruit3 from "../images/bruit3.JPG";
+
+import wiki1 from "../images/wiki1.jpg";
+import wiki2 from "../images/wiki2.jpg";
+import wiki3 from "../images/wiki3.jpg";
+
+import eau1 from "../images/eau1.jpg";
+import eau2 from "../images/eau2.jpg";
+import eau3 from "../images/eau3.jpg";
+import eau4 from "../images/eau4.jpg";
+import eau5 from "../images/eau5.jpg";
+
 const Title = styled.span`
   margin-top: 0.5%;
   font-size: 3rem;
@@ -50,7 +64,7 @@ class Home extends Component {
           <SubTitle>Goldsmiths Application</SubTitle>
         </Container>
         <Project 
-          images={ [water, water2, water3] } 
+          images={ [water3, water, water2] } 
           description={
             [
               "Material : glass, 383g of holy water, light ", 
@@ -60,136 +74,53 @@ class Home extends Component {
             ]} 
         />
 
-      <Project
-          images={ [ideal1, ideal2, ideal3, ideal4] } 
-          description={
-            [
-              "Material : vinyl words ", 
-              "This is the lack of materialisation of my ideal studio",
-            ]} 
-        />
-                <Project 
-          images={ [water, water2, water3] } 
-          description={
-            [
-              "Material : glass, 383g of holy water, light ", 
-              "This is the glass shape of five years of my life, resting on the blessed liquid weight of five years of my life. ",
-              "The anxiety induced by the unstoppable passage of time has always been a burden that I couldn’t understand how most people seemed to be able to effortlessly live with. To help me cope with it, I started factually recording every day of my life in 2012. Making my time physical, something that could be touched, that had a texture, a weight, made more sense to me. Eventually, I became even more obsessed with the physical attributes of the book itself than with the memories it contained. ",
-              "I made a glass cast of its shape and obtained the consecration of its exact weight, as water. The water received the benediction of the priest of my favorite Cathedral only after I confessed my complete lack of Christian modesty. He told me I shouldn't pursue modesty, and blessed us, my water and me."
-            ]} 
+        <Project
+            images={ [ideal1, ideal2, ideal3, ideal4] } 
+            description={
+              [
+                "Material : vinyl words ", 
+                "This is the lack of materialisation of my ideal studio",
+              ]} 
         />
 
-      <Project
-          images={ [ideal1, ideal2, ideal3, ideal4] } 
-          description={
-            [
-              "Material : vinyl words ", 
-              "This is the lack of materialisation of my ideal studio",
-            ]} 
-        />
-                <Project 
-          images={ [water, water2, water3] } 
-          description={
-            [
-              "Material : glass, 383g of holy water, light ", 
-              "This is the glass shape of five years of my life, resting on the blessed liquid weight of five years of my life. ",
-              "The anxiety induced by the unstoppable passage of time has always been a burden that I couldn’t understand how most people seemed to be able to effortlessly live with. To help me cope with it, I started factually recording every day of my life in 2012. Making my time physical, something that could be touched, that had a texture, a weight, made more sense to me. Eventually, I became even more obsessed with the physical attributes of the book itself than with the memories it contained. ",
-              "I made a glass cast of its shape and obtained the consecration of its exact weight, as water. The water received the benediction of the priest of my favorite Cathedral only after I confessed my complete lack of Christian modesty. He told me I shouldn't pursue modesty, and blessed us, my water and me."
-            ]} 
+        <Project
+            images={ [bruit1, bruit2, bruit3] } 
+            description={
+              [
+                "Material : superficially repaired objects, and the sound of their destruction", 
+                "Also pretty clear ",
+              ]} 
         />
 
-      <Project
-          images={ [ideal1, ideal2, ideal3, ideal4] } 
-          description={
-            [
-              "Material : vinyl words ", 
-              "This is the lack of materialisation of my ideal studio",
-            ]} 
-        />
-                <Project 
-          images={ [water, water2, water3] } 
-          description={
-            [
-              "Material : glass, 383g of holy water, light ", 
-              "This is the glass shape of five years of my life, resting on the blessed liquid weight of five years of my life. ",
-              "The anxiety induced by the unstoppable passage of time has always been a burden that I couldn’t understand how most people seemed to be able to effortlessly live with. To help me cope with it, I started factually recording every day of my life in 2012. Making my time physical, something that could be touched, that had a texture, a weight, made more sense to me. Eventually, I became even more obsessed with the physical attributes of the book itself than with the memories it contained. ",
-              "I made a glass cast of its shape and obtained the consecration of its exact weight, as water. The water received the benediction of the priest of my favorite Cathedral only after I confessed my complete lack of Christian modesty. He told me I shouldn't pursue modesty, and blessed us, my water and me."
-            ]} 
+        <Project
+            images={ [wiki3, wiki1, wiki2] } 
+            description={
+              [
+                "Material : Wikipedia articles", 
+                "This is all the tabs I opened and couldn’t bring myself to close. ",
+              ]} 
         />
 
-      <Project
-          images={ [ideal1, ideal2, ideal3, ideal4] } 
-          description={
-            [
-              "Material : vinyl words ", 
-              "This is the lack of materialisation of my ideal studio",
-            ]} 
-        />
-                <Project 
-          images={ [water, water2, water3] } 
-          description={
-            [
-              "Material : glass, 383g of holy water, light ", 
-              "This is the glass shape of five years of my life, resting on the blessed liquid weight of five years of my life. ",
-              "The anxiety induced by the unstoppable passage of time has always been a burden that I couldn’t understand how most people seemed to be able to effortlessly live with. To help me cope with it, I started factually recording every day of my life in 2012. Making my time physical, something that could be touched, that had a texture, a weight, made more sense to me. Eventually, I became even more obsessed with the physical attributes of the book itself than with the memories it contained. ",
-              "I made a glass cast of its shape and obtained the consecration of its exact weight, as water. The water received the benediction of the priest of my favorite Cathedral only after I confessed my complete lack of Christian modesty. He told me I shouldn't pursue modesty, and blessed us, my water and me."
-            ]} 
-        />
 
-      <Project
-          images={ [ideal1, ideal2, ideal3, ideal4] } 
-          description={
-            [
-              "Material : vinyl words ", 
-              "This is the lack of materialisation of my ideal studio",
-            ]} 
+        <Project
+            images = { [eau1, eau2, eau3, eau4, eau5] }
+            isRow = {true}
+            description={
+              [
+                "Material : waters, water-related memories", 
+                "This is pretty self explanatory… should I put a list of the ones I have so far ? ",
+              ]} 
         />
-                <Project 
-          images={ [water, water2, water3] } 
-          description={
-            [
-              "Material : glass, 383g of holy water, light ", 
-              "This is the glass shape of five years of my life, resting on the blessed liquid weight of five years of my life. ",
-              "The anxiety induced by the unstoppable passage of time has always been a burden that I couldn’t understand how most people seemed to be able to effortlessly live with. To help me cope with it, I started factually recording every day of my life in 2012. Making my time physical, something that could be touched, that had a texture, a weight, made more sense to me. Eventually, I became even more obsessed with the physical attributes of the book itself than with the memories it contained. ",
-              "I made a glass cast of its shape and obtained the consecration of its exact weight, as water. The water received the benediction of the priest of my favorite Cathedral only after I confessed my complete lack of Christian modesty. He told me I shouldn't pursue modesty, and blessed us, my water and me."
-            ]} 
-        />
-
-      <Project
-          images={ [ideal1, ideal2, ideal3, ideal4] } 
-          description={
-            [
-              "Material : vinyl words ", 
-              "This is the lack of materialisation of my ideal studio",
-            ]} 
-        />
-                <Project 
-          images={ [water, water2, water3] } 
-          description={
-            [
-              "Material : glass, 383g of holy water, light ", 
-              "This is the glass shape of five years of my life, resting on the blessed liquid weight of five years of my life. ",
-              "The anxiety induced by the unstoppable passage of time has always been a burden that I couldn’t understand how most people seemed to be able to effortlessly live with. To help me cope with it, I started factually recording every day of my life in 2012. Making my time physical, something that could be touched, that had a texture, a weight, made more sense to me. Eventually, I became even more obsessed with the physical attributes of the book itself than with the memories it contained. ",
-              "I made a glass cast of its shape and obtained the consecration of its exact weight, as water. The water received the benediction of the priest of my favorite Cathedral only after I confessed my complete lack of Christian modesty. He told me I shouldn't pursue modesty, and blessed us, my water and me."
-            ]} 
-        />
-
-      <Project
-          images={ [ideal1, ideal2, ideal3, ideal4] } 
-          description={
-            [
-              "Material : vinyl words ", 
-              "This is the lack of materialisation of my ideal studio",
-            ]} 
-        />
-
-        {/*<Link to={{
-        pathname:'/' + 'project'
-        }}
-        className="link"
-      >
-        <div>project 1</div>
-      </Link> */} 
+       
+        {
+          <Link to={{
+            pathname:'/' + 'inprogress'
+          }}
+          className="link"
+          >
+            <div>See work in progress</div>
+          </Link>
+        } 
       </Content>
     );
   }
