@@ -28,13 +28,19 @@ import eau4 from "../images/eau4.jpg";
 import eau5 from "../images/eau5.jpg";
 
 const Title = styled.span`
-  margin-top: 0.5%;
-  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  margin-top: 1%;
+  font-size: 5rem;
 `;
 
 const SubTitle = styled.span`
-  margin-top: 0.5%;
-  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  margin-top: 1%;
+  font-size: 1.5rem;
 `;
 
 const Container = styled.div`
@@ -61,7 +67,6 @@ class Home extends Component {
           <Title>Jézabel Plamondon</Title>
           <Title>2021</Title>
           <SubTitle>20 images</SubTitle>
-          <SubTitle>Goldsmiths Application</SubTitle>
         </Container>
         <Project 
           images={ [water2, water, water3] } 

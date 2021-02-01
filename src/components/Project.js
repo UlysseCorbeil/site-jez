@@ -1,6 +1,24 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+const Description = styled.span`
+  line-height: 130%;
+  @media (min-width:600px)  {
+    width: 40%;
+    margin-top: 1%;
+  }
+  @media (min-width:900px)  {
+    width: 60%;
+    margin-top: 1%;
+  }
+  @media (min-width:1100px)  {
+    width: 40%;
+    margin-top: 1%;
+  }
+  
+  width: 100%;
+  margin-top: 3%;
+`;
 const Image = styled.img`
   @media (min-width:600px)  {
     width: 100%;
@@ -14,21 +32,12 @@ const Image = styled.img`
   margin-bottom: 7%;
 `;
 
-const Description = styled.span`
-  line-height: 130%;
-  @media (min-width:600px)  {
-    width: 40%;
-    margin-top: 1%;
-  }
-  width: 100%;
-  margin-top: 3%;
-`;
-
 const Content = styled.div`
   @media (min-width:600px)  {
     margin-top: 1%;
     margin-bottom: 10%;
   }
+
   width: 100%;
   display: flex;
   flex-flow: column wrap;
@@ -41,6 +50,12 @@ const RowImage = styled.div`
   @media (min-width:600px)  {
     width: 40%;
   }
+  @media (min-width:900px)  {
+    width: 60%;
+  }
+  @media (min-width:1100px)  {
+    width: 40%;
+  }
     width: 100%;
     display: flex;
     flex-flow: ${props => props.isRow ? 'row wrap' : 'column wrap'};
@@ -48,21 +63,31 @@ const RowImage = styled.div`
 `;
 
 class Project extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {dimensions: {}};
+    this.onImgLoad = this.onImgLoad.bind(this);
+  }
+
+  onImgLoad({target:img}) {
+    if(img.naturalWidth > img.naturalHeight) {
+      img.classList.add("horizontalImage");
+    }
+  }
   render () {
     const props =  this.props;
+    const {width, height} = this.state.dimensions;
 
     return (
       <Content isRow= {props.isRow}>
         <RowImage isRow= {props.isRow}>
           {
             this.props.images.map((image, index) => (
-              (index == 1 || index == 2) && (props.isRow) ? 
-                (<Image key={image} src={image} className={'rowImage'}/>) 
-                : (<Image key={image} src={image} />
-              )
+              (index == 1 || index == 2) && (props.isRow) ? (<Image onLoad={this.onImgLoad} key={image} src={image} className={'rowImage'}/>) : (<Image onLoad={this.onImgLoad}  key={image} src={image}/>)
             ))
           }
         </RowImage>
+
         {
           this.props.description.map(description => (
             <Description key={description}>{description}</Description>
