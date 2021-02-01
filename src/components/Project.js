@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Description = styled.span`
+  font-size: 1.2rem;
   line-height: 130%;
   @media (min-width:600px)  {
     width: 40%;
