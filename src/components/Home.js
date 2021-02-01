@@ -32,7 +32,7 @@ const Title = styled.span`
   justify-content: center;
   align-items: left;
   margin-top: 1%;
-  font-size: 5rem;
+  font-size: 2rem;
 `;
 
 const SubTitle = styled.span`
@@ -40,7 +40,7 @@ const SubTitle = styled.span`
   justify-content: center;
   align-items: left;
   margin-top: 1%;
-  font-size: 1.5rem;
+  font-size: 2rem;
 `;
 
 const Container = styled.div`
