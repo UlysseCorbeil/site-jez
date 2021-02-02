@@ -23,6 +23,7 @@ const Description = styled.span`
 const Image = styled.img`
   @media (min-width:600px)  {
     width: 100%;
+    height: auto;
     margin-bottom: 10%;
     :nth-child(1) {
       margin-top: 15%;
@@ -30,6 +31,7 @@ const Image = styled.img`
   }
 
   width: 100%;
+  height: auto;
   margin-bottom: 7%;
 `;
 
@@ -66,18 +68,17 @@ const RowImage = styled.div`
 class Project extends Component {
   constructor(props) {
     super(props);
-    this.state = {dimensions: {}};
     this.onImgLoad = this.onImgLoad.bind(this);
   }
 
   onImgLoad({target:img}) {
+
     if(img.naturalWidth > img.naturalHeight) {
       img.classList.add("horizontalImage");
     }
   }
   render () {
     const props =  this.props;
-    const {width, height} = this.state.dimensions;
 
     return (
       <Content isRow= {props.isRow}>
