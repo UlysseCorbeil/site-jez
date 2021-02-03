@@ -13,8 +13,7 @@ import * as serviceWorker from './serviceWorker';
 import ReactGA from 'react-ga';
 
 ReactGA.initialize(process.env.GA_ID);
-let test = process.env;
-console.log (test);
+
 // render page
 ReactDOM.render(
     <Router>
