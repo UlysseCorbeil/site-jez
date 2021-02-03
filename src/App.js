@@ -13,6 +13,7 @@ import ErrorPage from './components/ErrorPage';
 const AppContainer = styled.section`
     width: 100%;
 `;
+
 ReactGA.initialize(process.env.REACT_APP_GA_ID);
 
 const GlobalStyle = createGlobalStyle`
