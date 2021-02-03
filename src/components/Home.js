@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 
 import styled from 'styled-components';
 
 import Project from "./Project";
+import Nav from "./Nav";
+
 import water from "../images/24.jpg";
 import water2 from "../images/21.jpg";
 import water3 from "../images/9.jpg";
@@ -27,35 +28,11 @@ import eau3 from "../images/eau3.jpg";
 import eau4 from "../images/eau4.jpg";
 import eau5 from "../images/eau5.jpg";
 
-const Title = styled.span`
-  display: flex;
-  justify-content: center;
-  align-items: left;
-  margin-top: 1%;
-  font-size: 2rem;
-`;
-
-const SubTitle = styled.span`
-  display: flex;
-  justify-content: center;
-  align-items: left;
-  margin-top: 1%;
-  font-size: 2rem;
-`;
-
-const Container = styled.div`
-      width: 100%;
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: center;
-      align-items: left;
-`;
-
 const Content = styled.section`
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 `;
 
 class Home extends Component {
@@ -63,11 +40,8 @@ class Home extends Component {
   render () {
     return (
       <Content>
-        <Container>
-          <Title>Jézabel Plamondon</Title>
-          <Title>2021</Title>
-          <SubTitle>20 images</SubTitle>
-        </Container>
+
+        <Nav />
         <Project 
           images={ [water2, water, water3] } 
           description={
@@ -115,15 +89,6 @@ class Home extends Component {
               ]} 
         />
        
-        {
-          <Link to={{
-            pathname:'/' + 'inprogress'
-          }}
-          className="link"
-          >
-            <div>See work in progress</div>
-          </Link>
-        } 
       </Content>
     );
   }

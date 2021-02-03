@@ -331,8 +331,6 @@ textarea {
     width: 45%;
 }
 .horizontalImage {
-    width: 150%;
-    margin-left: -25%;
     @media (min-width:600px)  {
         width: 100%;
         margin-left: 0%;
@@ -344,7 +342,6 @@ textarea {
     @media (min-width:1100px)  {
         width: 150%;
         margin-left: -25%;
-
     }
 }
 

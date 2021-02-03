@@ -24,15 +24,15 @@ const Image = styled.img`
   @media (min-width:600px)  {
     width: 100%;
     height: auto;
-    margin-bottom: 10%;
+    padding-bottom: 10%;
     :nth-child(1) {
-      margin-top: 15%;
+      padding-top: 15%;
     }
   }
 
   width: 100%;
   height: auto;
-  margin-bottom: 7%;
+  padding-bottom: 7%;
 `;
 
 const Content = styled.div`
