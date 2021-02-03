@@ -10,6 +10,10 @@ import ScrollToTop from './components/ScrollToTop';
 // service worker
 import * as serviceWorker from './serviceWorker';
 
+import ReactGA from 'react-ga';
+
+ReactGA.initialize(process.env.GA_ID);
+
 // render page
 ReactDOM.render(
     <Router>
