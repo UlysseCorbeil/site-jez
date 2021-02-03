@@ -10,7 +10,6 @@ import ScrollToTop from './components/ScrollToTop';
 // service worker
 import * as serviceWorker from './serviceWorker';
 
-import ReactGA from 'react-ga';
 
 
 // render page
@@ -18,7 +17,6 @@ ReactDOM.render(
     <Router>
         <ScrollToTop>
             <App />
-            {ReactGA.initialize(process.env.GA_ID)}
             {console.log("%cMade with love in Montreal \n By Ulysse Corbeil \n For Jézabel", "background-color: black; color: white; padding: 15px;")}
             {console.log("%cLinkedIn -> https://www.linkedin.com/in/ulysse-corbeil/", " padding: 15px;")}
         </ScrollToTop>

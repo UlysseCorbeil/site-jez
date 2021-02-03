@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import { Switch, Route, withRouter } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -12,6 +13,7 @@ import ErrorPage from './components/ErrorPage';
 const AppContainer = styled.section`
     width: 100%;
 `;
+// ReactGA.initialize(process.env.GA_ID);
 
 const GlobalStyle = createGlobalStyle`
   ${Reset}
