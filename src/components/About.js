@@ -48,7 +48,9 @@ const Item = styled.div`
 `;
 
 const ItemsWrapper = styled.div`
-
+  @media (max-width:768px)  {
+    width: 100%
+  }
   width: 40%;
    > * {
       &:first-child {
@@ -79,7 +81,9 @@ const ContactItem = styled.div`
 `;
 
 const ContactWrapper = styled.div`
-
+  @media (max-width:768px)  {
+    width: 100%
+  }
   width: 40%;
 `;
 
@@ -128,12 +132,10 @@ class About extends Component {
                 <SectionTitle>Individual exhibitions</SectionTitle>
                 <Info>
                   <Year>2020</Year>
-                  <InfoText>Abroad semester, Freie Kunst Diploma, Bauhaus Universität, Weimar</InfoText>
+                  <InfoText>Why Is Wikipedia Like Water, Van de Velde building, Weimar
+	curated by Maggy Metsos</InfoText>
                 </Info>
-                <Info>
-                  <Year>2020</Year>
-                  <InfoText>Bachelor’s degree, Fine Arts, Concordia University, Montréal</InfoText>
-                </Info>
+
               </Item>
 
               <Item>
@@ -207,7 +209,7 @@ curated by Florence Yee</InfoText>
               </Item>
 
               <Item>
-                <SectionTitle>Artist residencies  </SectionTitle>
+                <SectionTitle>Work experiences   </SectionTitle>
                 <Info>
                   <Year>2020</Year>
                   <InfoText>Restoration and conservation of artworks, internship, Gemälde Restaurierung Leipzig Eva Johanna Berger</InfoText>
