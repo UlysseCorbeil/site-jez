@@ -2,22 +2,6 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
-const Title = styled.span`
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    margin-top: 1%;
-    font-size: 2rem;
-`;
-
-const SubTitle = styled.span`
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    margin-top: 1%;
-    font-size: 2rem;
-`;
-
 const Container = styled.div`
     width: 100%;
     display: flex;
@@ -27,7 +11,8 @@ const Container = styled.div`
 `;
 
 const NavSection = styled.nav`
-    position: absolute;
+    position: fixed;
+    background-color: white;
     top: 0;
     left: 0;
     width: 100%; 
@@ -35,15 +20,17 @@ const NavSection = styled.nav`
 
 const NavInnerCtn = styled.div`
     display: flex;
-    justify-content: center;
     align-items: left;
-    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 100%;
     font-size: 2rem;
 `;
 
 const NavItem = styled.div`
-    width: 100%;
-    font-size: 1/rem;
+    margin-right: 5%;
+    padding: 1%;
+    font-size: 1.5rem;
 `;
 
 
@@ -64,20 +51,29 @@ class Nav extends Component {
 
     return (
     <Container>
-        <Title>Jézabel Plamondon</Title>
-        <Title>2021</Title>
-
-        {/* <NavSection>
+        <NavSection>
             <NavInnerCtn>
-                <Link to={{
-                    pathname:'/' + 'inprogress'
-                    }}
-                    className="link"
-                >
-                    <NavItem>Work in progress</NavItem>
-                </Link>
+                <NavItem>
+                    <Link to={{
+                        pathname:'/'
+                        }}
+                        className="link"
+                    >
+                        Jézabel Plamondon
+                    </Link>
+                </NavItem>
+                <NavItem>
+                    <Link to={{
+                        pathname:'/' + 'about'
+                        }}
+                        className="link"
+                    >
+                    About
+                    </Link>
+                </NavItem>
+
             </NavInnerCtn>
-        </NavSection> */}
+        </NavSection>
     </Container>
     );
   }

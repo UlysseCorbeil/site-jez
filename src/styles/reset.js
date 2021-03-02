@@ -314,15 +314,14 @@ textarea {
     padding: 0.2em 0;
 }
 
-.link {
+.link, .link:active, .link:focus {
     width: 100%;
     padding: 1%;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    flex-flow: column row;
     color: black;
-    text-decoration: underline;
+    outline: none;
+    text-decoration: none;
     cursor: pointer;
 }
 .rowImage {

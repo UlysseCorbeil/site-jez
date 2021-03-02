@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Project from "./Project";
-import Nav from "./Nav";
 
 import water from "../images/24.jpg";
 import water2 from "../images/21.jpg";
@@ -35,20 +34,48 @@ const Content = styled.section`
   padding-bottom: 5%;
 `;
 
+const TitleSection = styled.div`
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+`;
+
+const Title = styled.h1`
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin-top: 1%;
+    font-size: 3rem;
+`;
+
+const SubTitle = styled.h2`
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin-top: 1%;
+    font-size: 3rem;
+`;
+
+
 class Home extends Component {
 
   render () {
     return (
       <Content>
 
-        <Nav />
+        <TitleSection>
+          <Title>Portfolio</Title>
+          <SubTitle>2021</SubTitle>
+        </TitleSection>
+
         <Project 
           images={ [water2, water, water3] } 
           description={
             [
+              "Daily",
               "2018",
-              "Materials : glass, 383g of holy water, light ", 
-              "This is the glass shape of five years of my life, resting on the blessed liquid weight of five years of my life. ",
+              "Glass, 383g of holy water and light", 
               "The anxiety induced by the unstoppable passage of time has always been a burden that I couldn’t understand how most people seemed to be able to effortlessly live with. To help me cope with it, I started factually recording every day of my life in 2012. Making my time physical, something that could be touched, that had a texture, a weight, made more sense to me. Eventually, I became even more obsessed with the physical attributes of the book itself than with the memories it contained. ",
               "I made a glass cast of its shape and obtained the consecration of its exact weight, as water. The water received the benediction of the priest of my favorite Cathedral only after I confessed my complete lack of Christian modesty. He told me I shouldn't pursue modesty, and blessed us, my water and me."
             ]} 
@@ -58,9 +85,10 @@ class Home extends Component {
             images={ [ideal1, ideal2, ideal3, ideal4] } 
             description={
               [
+                "Ideally",
                 "2018",
-                "Materials : black vinyl, borrowed space", 
-                "This is the lack of materialization of my own studio. ",
+                "Black vinyl, white vinyl and borrowed space", 
+                "The lack of materialization of my own space was haunting me, so I made myself a studio out of words.",
               ]} 
         />
 
@@ -68,8 +96,11 @@ class Home extends Component {
             images={ [bruit1, bruit2, bruit3] } 
             description={
               [
+                "Repaired",
                 "2019",
-                "Materials : superficially repaired objects and the sound of their destruction ", 
+                "DVD player, book, Apple keyboard, glue, earphones and Ipods",
+                "Superficially repaired objects are juxtaposed to the sound of their destruction.", 
+                "Exploring the futile act of superficially repairing something that is permanently broken, between the desire and the shame to destroy, the fast and the slow, the care and the violence, the unpredictability and the certainty, the careless and the careful, this project addresses the tension, fear, and distance between different degrees of exactness."
               ]} 
         />
 
@@ -77,8 +108,9 @@ class Home extends Component {
             images={ [wiki1, wiki2, wiki3] } 
             description={
               [
+                "Why is Wikipedia Like Water",
                 "2020",
-                "Material : Wikipedia articles ", 
+                "Inkjet prints on A4 paper and laser-cut ceramic", 
                 "An online research history as a self portrait exploring the relationship between the amount of available knowledge and mortality, recreating this overwhelming feeling of opening too many Wikipedia tabs. ",
               ]} 
         />
@@ -89,8 +121,10 @@ class Home extends Component {
             isRow = {true}
             description={
               [
+                "Water Collection",
                 "2020 - ongoing",
-                "Materials : waters from art institution, churches, rivers, and water-related memories", 
+                "Water, glass bottles and pen on paper",
+                "Water samples from art institution, churches, rivers, and water-related memories are married in an embrace full of futility and sacredness. "
               ]} 
         />
        

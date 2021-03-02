@@ -6,8 +6,9 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 import Reset from './styles/reset';
 import Home from './components/Home';
-import InProgress from './components/InProgress';
+import InProgress from './components/About';
 import ErrorPage from './components/ErrorPage';
+import Nav from "./components/Nav";
 
 const AppContainer = styled.section`
     width: 100%;
@@ -56,15 +57,18 @@ class App extends Component {
           <TransitionGroup className="transition-group page">
             <CSSTransition key={location.key} timeout={300} classNames="page">
               <section className="route-section">
+
                 <Switch location={location}>
 
                   <Route exact path={'/'} component={() => <Home />} />
-                  <Route exact path={'/inprogress'} component={() => <InProgress />} />
+                  <Route exact path={'/about'} component={() => <InProgress />} />
                   <Route component={() => <ErrorPage />} />
                 </Switch>
               </section>
             </CSSTransition>
           </TransitionGroup>
+          <Nav/>
+
 
       </AppContainer>  
     );

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Description = styled.span`
+
   font-size: 1.2rem;
   line-height: 130%;
   @media (min-width:600px)  {
@@ -16,7 +17,7 @@ const Description = styled.span`
     width: 40%;
     margin-top: 1%;
   }
-  
+
   width: 100%;
   margin-top: 3%;
 `;
@@ -82,6 +83,11 @@ class Project extends Component {
 
     return (
       <Content isRow= {props.isRow}>
+        {
+          this.props.description.map(description => (
+            <Description key={description}>{description}</Description>
+          ))
+        }
         <RowImage isRow= {props.isRow}>
           {
             this.props.images.map((image, index) => (
@@ -90,11 +96,7 @@ class Project extends Component {
           }
         </RowImage>
 
-        {
-          this.props.description.map(description => (
-            <Description key={description}>{description}</Description>
-          ))
-        }
+
      
       </Content>
     );
