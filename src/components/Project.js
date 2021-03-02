@@ -18,6 +18,7 @@ const Description = styled.span`
     margin-top: 1%;
   }
 
+
   width: 100%;
   margin-top: 3%;
 `;
@@ -83,11 +84,7 @@ class Project extends Component {
 
     return (
       <Content isRow= {props.isRow}>
-        {
-          this.props.description.map(description => (
-            <Description key={description}>{description}</Description>
-          ))
-        }
+
         <RowImage isRow= {props.isRow}>
           {
             this.props.images.map((image, index) => (
@@ -96,7 +93,11 @@ class Project extends Component {
           }
         </RowImage>
 
-
+        {
+          this.props.description.map((description, index) => (
+            <Description key={description} style={index == 0  ? {fontSize: "1.5rem"}: {}}>{description}</Description>
+          ))
+        }
      
       </Content>
     );

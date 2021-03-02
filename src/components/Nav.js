@@ -30,7 +30,7 @@ const NavInnerCtn = styled.div`
 const NavItem = styled.div`
     margin-right: 5%;
     padding: 1%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 `;
 
 
@@ -59,7 +59,7 @@ class Nav extends Component {
                         }}
                         className="link"
                     >
-                        Jézabel Plamondon
+                        Selected Works
                     </Link>
                 </NavItem>
                 <NavItem>

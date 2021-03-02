@@ -65,6 +65,7 @@ class Home extends Component {
       <Content>
 
         <TitleSection>
+          <Title>Jézabel Plamondon</Title>
           <Title>Portfolio</Title>
           <SubTitle>2021</SubTitle>
         </TitleSection>

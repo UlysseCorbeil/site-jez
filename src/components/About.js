@@ -14,12 +14,15 @@ import ideal4 from "../images/ideal6.jpg";
 
 
 
-const Title = styled.h1`
+const Title = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: left;
+    width: 40%;
+    @media (max-width:768px)  {
+    width: 100%
+    }
+    width: 40%;
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     font-size: 2rem;
 `;
 const Container = styled.div`
@@ -31,7 +34,6 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
   align-items: center;
   margin-bottom: 15%;
 `;
@@ -90,7 +92,7 @@ const ContactWrapper = styled.div`
 const ContactTitle = styled.div`
     border-bottom: 2px solid black;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: left;
     margin-top: 5%;
     font-size: 2rem;
