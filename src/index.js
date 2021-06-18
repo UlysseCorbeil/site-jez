@@ -15,8 +15,6 @@ ReactDOM.render(
     <Router>
         <ScrollToTop>
             <App />
-            {console.log("%cMade with love in Montreal \n By Ulysse Corbeil \n For Jézabel", "background-color: black; color: white; padding: 15px;")}
-            {console.log("%cLinkedIn -> https://www.linkedin.com/in/ulysse-corbeil/", " padding: 15px;")}
         </ScrollToTop>
     </Router>,
     document.getElementById('root')
